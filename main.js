@@ -72,11 +72,10 @@ function sleep(seconds) {
     return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 }
 
-
 async function processURLx() {
     while (urlx) {
         if (urlx.innerHTML === '' && sent === true) {
-            await sleep(1.5); // wait 1.5 seconds
+            await sleep(1.5);
             urlx.remove();
         } else {
             await sleep(1.5);
@@ -84,8 +83,6 @@ async function processURLx() {
     }
 }
 
-
 processURLx();
-
 
 loadURL();

